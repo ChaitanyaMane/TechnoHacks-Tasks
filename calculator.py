@@ -84,7 +84,7 @@ if __name__ == "__main__":
     ]
 
     for (text, row, col) in buttons:
-        button = Button(gui, text=text, fg='white', bg='blue', font=("Arial", 15),
+        button = Button(gui, text=text, fg='white', bg='black', font=("Arial", 15),
                         command=lambda num=text: press(num), height=2, width=5)
         button.grid(row=row, column=col, padx=5, pady=5)
 
@@ -92,7 +92,7 @@ if __name__ == "__main__":
                           command=clear, height=2, width=5)
     clear_button.grid(row=1, column=3, padx=5, pady=5)
 
-    equal_button = Button(gui, text='=', fg='white', bg='blue', font=("Arial", 15),
+    equal_button = Button(gui, text='=', fg='white', bg='orange', font=("Arial", 15),
                           command=equalpress, height=2, width=5)
     equal_button.grid(row=5, column=2, padx=5, pady=5)
 
