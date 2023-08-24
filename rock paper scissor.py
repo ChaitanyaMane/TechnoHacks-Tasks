@@ -60,7 +60,7 @@ label.pack(fill=tk.X, pady=10)
 
 # Load and display an image
 image = Image.open('img.jpg')
-image = image.resize((160, 160))
+image = image.resize((250,200))
 photo = ImageTk.PhotoImage(image)
 image_label = tk.Label(image=photo)
 image_label.pack()
@@ -72,7 +72,7 @@ window.configure(bg="gray")
 choices = [ 'rock','paper','scissor']
 buttons = []
 for idx, choice in enumerate(choices):
-    button = tk.Button(text=choice.capitalize(), bg="yellow", fg="black",
+    button = tk.Button(text=choice.capitalize(), bg="purple", fg="black",
                        command=lambda c=choice: play(c), font=('arial', 15, 'bold'))
     buttons.append(button)
     button.pack(fill=tk.X, padx=20, pady=5)
@@ -91,7 +91,7 @@ def restart_game():
     GAME_ACTIVE = True
 
 # Create the restart button
-restart_button = tk.Button(text="Restart", bg="red", fg="yellow",
+restart_button = tk.Button(text="Restart", bg="red", fg="white",
                            command=restart_game, font=('arial', 15, 'bold'))
 restart_button.pack(fill=tk.X, padx=20, pady=10)
 restart_button.config(state=tk.DISABLED)
